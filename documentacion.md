@@ -9,7 +9,7 @@ En primer lugar se recuerdan los participantes de este grupo de trabajo:
 * Miguel Fabre Navarro (nombre en GIT: miguelfabre)
 * Francisco Porcel Sendrós (nombre en GIT: FranciscoPorcel)
 
-### Descripción del proyecto
+### Descripción del proyecto 
 
 La aplicación deberá gestionar las siguientes funcionalidades de la [Oficina de Software Libre](http://osl.ugr.es/):
 
