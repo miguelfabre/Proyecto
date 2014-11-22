@@ -60,15 +60,3 @@ Por último, ya solo nos quedaría comprobar que nuestra aplicación funciona co
 
 
 
-
-
-
-
-
-
-
-
-
-![](https://github.com/miguelfabre/GII-2014/blob/master/Proyecto/Hito 2/imagenes/hito2-1.png)
-
-
