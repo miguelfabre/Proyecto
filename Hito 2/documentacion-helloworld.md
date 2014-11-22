@@ -10,7 +10,7 @@ A continuación, vamos a explicar paso a paso como crear una aplicación con Goo
 
 Accedemos a [Google App Engine] (https://appengine.google.com/start), hacemos click en "Create application" y completamos el formulario para crear nuestra aplicación.
 
-![](https://github.com/miguelfabre/GII-2014/blob/master/Proyecto/Hito 2/imagenes/hito2-1.png)
+![](https://github.com/miguelfabre/Proyecto/blob/master/Hito%202/imagenes/hito2-1.png)
 
 ##Paso 2: Configuración
 
