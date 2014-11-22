@@ -51,8 +51,8 @@ Este proyecto ha sido presentado al certamen de proyectos de la UGR bajo el nomb
 Hasta el momento los hitos del proyecto son los siguientes:
 
 * [X] Documentación inicial del proyecto y creación del repositorio.
-* [ ] Diseño
-* [ ] Iniciación en la herramienta escogida y elección del lenguaje de programación
+* [X] Diseño
+* [X] Iniciación en la herramienta escogida y elección del lenguaje de programación
 * [ ] Desarrollo
 * [ ] Periodo de pruebas
 * [ ] Mejora de la aplicación
