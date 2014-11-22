@@ -9,3 +9,13 @@ Integrantes del grupo:
 
 * Miguel Fabre Navarro
 * Francisco Porcel Sendrós
+
+========
+
+Este proyecto participa en el "Certamen de proyectos de la UGR". Para ello es necesario incluir en este documento un enlace a las bases del concurso:
+
+[Bases del concurso](http://osl.ugr.es/bases-de-los-premios-a-proyectos-libres-de-la-ugr/)
+
+Este proyecto se ha incluido con el nombre:
+
+* Gestión de eventos para la OSL
