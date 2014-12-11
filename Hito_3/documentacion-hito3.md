@@ -58,6 +58,6 @@ Y procedemos a instalar webapp2 juntas con las librerías de python necesarias
 
 Una vez disponemos de todas las herramientas necesarias, vamos a probar que nuestra aplicación funciona. Para ello, ejecutamos el código python de ésta y comprobamos si está corriendo con webapp2 en el 'localhost'.
 
-![](https://github.com/miguelfabre/Proyecto/blob/master/Hito%202/imagenes/hito2-3.png)
+![](https://github.com/miguelfabre/Proyecto/blob/master/Hito%202/imagenes/hito3-11.png)
 
 Como vemos, todo funciona correctamente.
