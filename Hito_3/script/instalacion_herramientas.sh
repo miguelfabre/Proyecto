@@ -10,3 +10,8 @@ pip install WebOb
 pip install Paste
 pip install webapp2
 
+apt-get install wget
+wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.17.zip --no-check-certificate
+apt-get install zip
+unzip google_appengine_1.9.17.zip
+
