@@ -24,4 +24,4 @@
 
 [Creación de jaula e instalación y ejecución de SaraosOSL paso a paso](/home/miguel/Escritorio/IV2/GII-2014/Proyecto/documentacion/saraososl_paso_a_paso.md)
 
-##[Aplicación funcionando](http://pruebadriveiv.appspot.com/)
+[Aplicación funcionando](http://pruebadriveiv.appspot.com/)
