@@ -90,7 +90,7 @@ Ejecutamos la aplicacion
 
 ```python google_appengine/dev_appserver.py Fuentes/pruebadriveiv/```
 
-![](https://github.com/miguelfabre/Proyecto/blob/master/Hito_3/imagenes/hito3-12.png)
+![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito_3/imagenes/hito3-12.png)
 
 Como vemos, el servidor está escuchando. Comprobamos en "localhost:8080" que la aplicación funciona correctamente.
 
@@ -107,10 +107,4 @@ Si pinchamos, podemos ver que la inserción se ha realizado con éxito:
 ![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito_3/imagenes/hito3-15.png)
 
 Como vemos, todo funciona correctamente. Lo puedes probar en [pruebadriveiv](http://pruebadriveiv.appspot.com)
-![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito_3/imagenes/hito3-14.png)
 
-Si pinchamos, podemos ver que la inserción se ha realizado con éxito:
-
-![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito_3/imagenes/hito3-15.png)
-
-Como vemos, todo funciona correctamente. Lo puedes probar en [pruebadriveiv](http://pruebadriveiv.appspot.com)
