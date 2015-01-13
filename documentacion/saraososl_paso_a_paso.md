@@ -106,5 +106,5 @@ Si pinchamos, podemos ver que la inserción se ha realizado con éxito:
 
 ![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito_3/imagenes/hito3-15.png)
 
-Como vemos, todo funciona correctamente. Lo puedes probar en [pruebadriveiv](http://pruebadriveiv.appspot.com)
+Como vemos, todo funciona correctamente a nivel local. Tú lo puedes probar en la red en [pruebadriveiv](http://pruebadriveiv.appspot.com)
 
