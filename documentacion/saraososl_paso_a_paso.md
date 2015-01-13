@@ -1,4 +1,4 @@
-#Tercer hito: Creación de un entorno de pruebas para la aplicación
+#Creación de jaula e instalación y ejecución de SaraosOSL paso a paso
 
 A continuación, vamos a explicar paso a paso como se ha llevado a cabo la resolución del tercer hito de la asignatura. En éste se pedía, diseñar usando alguna de los sistemas de aislamiento de recursos vistos en los ejercicios,un contenedor o jaula con el que se pueda probar fácilmente en esta fase la aplicación que se está diseñando.
 
@@ -64,21 +64,37 @@ Una vez hecho esto nos descargamos el JDK de Google App Engine:
 
 ```wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.17.zip --no-check-certificate```
 
+Instalamos la herramienta zip
+
+```apt-get install zip```
+
 Y lo descomprimimos:
 
 ```unzip google_appengine_1.9.17.zip ``` 
 
-(Si no tenemos zip instalado lo instalamos: ```apt-get install zip ``` )
+
 
 ##Paso 3: Ejecución de la aplicación
 
-Una vez disponemos de todas las herramientas necesarias, vamos a probar que nuestra aplicación funciona. Para ello, ejecutamos el código python de ésta y comprobamos si está corriendo con webapp2 en el 'localhost'. Para ello, tenemos que ejecutar lo siguiente:
+Una vez hecho esto ya tenemos instalado el entorno de desarrollo necesario para construir y ejecutar aplicaciones que luego funcionarán bajo Google App Engine
 
-```python "carpeta del sdk"/dev_appserver.py /"carpeta del proyecto" ``` 
+Instalamos git
+
+```apt-get install -y git```
+
+Clonamos la carpeta en donde se encuentran los ficheros fuentes de la aplicacion
+
+```git clone https://github.com/FranciscoPorcel/Fuentes.git```
+
+Ejecutamos la aplicacion
+
+```python google_appengine/dev_appserver.py Fuentes/pruebadriveiv/```
 
 ![](https://github.com/miguelfabre/Proyecto/blob/master/Hito_3/imagenes/hito3-12.png)
 
 Como vemos, el servidor está escuchando. Comprobamos en "localhost:8080" que la aplicación funciona correctamente.
+
+Ahora nos vamos al navegador y escribimos http://localhost:8080/
 
 ![](https://github.com/miguelfabre/Proyecto/blob/master/Hito_3/imagenes/hito3-13.png)
 
@@ -89,5 +105,12 @@ Al aceptar se nos mandará a una nueva página que nos ofrece el enlace de la ho
 Si pinchamos, podemos ver que la inserción se ha realizado con éxito:
 
 ![](https://github.com/miguelfabre/Proyecto/blob/master/Hito_3/imagenes/hito3-15.png)
+
+Como vemos, todo funciona correctamente. Lo puedes probar en [pruebadriveiv](http://pruebadriveiv.appspot.com)
+![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito_3/imagenes/hito3-14.png)
+
+Si pinchamos, podemos ver que la inserción se ha realizado con éxito:
+
+![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito_3/imagenes/hito3-15.png)
 
 Como vemos, todo funciona correctamente. Lo puedes probar en [pruebadriveiv](http://pruebadriveiv.appspot.com)
