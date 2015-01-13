@@ -22,6 +22,6 @@
 
 [Script: Instalar y ejecutar SaraosOSL en el entorno de pruebas](/home/miguel/Escritorio/IV2/GII-2014/Proyecto/documentacion/instalacion_saraososl.md)
 
-[Creación de jaula e instalación y ejecución de SaraosOSL paso a paso](/home/miguel/Escritorio/IV2/GII-2014/Proyecto/documentacion/saraososl_paso_a_paso.md)
+[Creación de jaula e instalación y ejecución de SaraosOSL paso a paso](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/saraososl_paso_a_paso.md)
 
 [Aplicación funcionando](http://pruebadriveiv.appspot.com/)
