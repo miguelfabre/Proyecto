@@ -22,6 +22,8 @@ wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9
 apt-get install zip
 # Descomprimimos el fichero descargado, con lo que ya tendremos disponibles las herramientas del sdk
 unzip google_appengine_1.9.17.zip
+# Instalamos la herramienta cURL para hacer uso de ésta a la hora de ejecutar los tests
+apt-get install curl
 # Una vez hecho esto ya tenemos instalado el entorno de desarrollo necesario para construir y ejecutar aplicaciones que luego funcionarán bajo Google App Engine
 # Instalamos git
 apt-get install -y git

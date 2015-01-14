@@ -1,6 +1,6 @@
 # Script: Instalar y ejecutar SaraosOSL en el entorno de pruebas
 
-Para la instalación y ejecución la aplicación SaraosOSL, una vez creado el entorno de pruebas, basta con ejecutar uno a uno los comandos que se describen a continuación o ejecutar el script [instalacion_herramientas.sh](): 
+Para la instalación y ejecución la aplicación SaraosOSL, una vez creado el entorno de pruebas, basta con ejecutar uno a uno los comandos que se describen a continuación o ejecutar el script [instalacion_herramientas.sh](https://github.com/miguelfabre/Proyecto/blob/master/script/instalacion_herramientas.sh): 
 
 i) Montamos el sistema de ficheros /proc
 
@@ -13,11 +13,17 @@ ii) Configuramos el Locale para que no de errores
 iii) Instalamos python y una serie de herramientas necesarias
 
 ```apt-get install python
+
 apt-get install python3-setuptools
+
 easy_install3 pip
+
 apt-get install python-dev build-essential
+
 pip install WebOb
+
 pip install Paste
+
 pip install webapp2```
 
 iv) Instalamos wget para poder descargar archivos

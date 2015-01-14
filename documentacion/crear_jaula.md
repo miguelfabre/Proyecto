@@ -1,6 +1,6 @@
 #Script: Crear una jaula en tu equipo
 
-Para la creación de la jaula que nos servirá como entorno de pruebas, basta con ejecutar uno a uno los comandos que se describen a continuación o ejecutar el script [creacion_jaula.sh](): 
+Para la creación de la jaula que nos servirá como entorno de pruebas, basta con ejecutar uno a uno los comandos que se describen a continuación o ejecutar el script [creacion_jaula.sh](https://github.com/miguelfabre/Proyecto/blob/master/script/creacion_jaula.sh): 
 
 i) Instalación de debootstrap
 
