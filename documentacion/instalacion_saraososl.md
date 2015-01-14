@@ -42,21 +42,25 @@ vii) Descomprimimos el fichero descargado, con lo que ya tendremos disponibles l
 
 ```unzip google_appengine_1.9.17.zip```
 
+viii) Instalamos la herramienta cURL para hacer uso de ésta a la hora de ejecutar los tests
+
+```apt-get install curl```
+
 Una vez hecho esto ya tenemos instalado el entorno de desarrollo necesario para construir y ejecutar aplicaciones que luego funcionarán bajo Google App Engine.
 
-viii) Instalamos git
+ix) Instalamos git
 
 ```apt-get install -y git```
 
-ix) Clonamos la carpeta en donde se encuentran los ficheros fuentes de la aplicacion
+x) Clonamos la carpeta en donde se encuentran los ficheros fuentes de la aplicacion
 
 ```git clone https://github.com/FranciscoPorcel/Fuentes.git```
 
-x) Ejecutamos la aplicacion
+xi) Ejecutamos la aplicacion
 
 ```python google_appengine/dev_appserver.py Fuentes/pruebadriveiv/```
 
-xi) Ahora nos vamos al navegador y escribimos http://localhost:8080/
+xii) Ahora nos vamos al navegador y escribimos http://localhost:8080/
 
 ```echo "Abrir el navegador y escribir http://localhost:8080/ para ver la app en funcionamiento."```
 
