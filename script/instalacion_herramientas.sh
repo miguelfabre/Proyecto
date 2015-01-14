@@ -14,6 +14,8 @@ pip install Paste
 pip install webapp2
 # Instalamos wget para poder descargar archivos
 apt-get install wget
+#Instalamos curl para posteriormente poder realizar los test de pruebas
+apt-get install curl
 # Descargamos el sdk de Google App Engine
 wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.17.zip --no-check-certificate
 # Instalamos la herramienta zip
@@ -28,5 +30,5 @@ git clone https://github.com/FranciscoPorcel/Fuentes.git
 #Ejecutamos la aplicacion
 python google_appengine/dev_appserver.py Fuentes/pruebadriveiv/
 #Ahora nos vamos al navegador y escribimos http://localhost:8080/
-echo "Abrir el navegador y escribir http://localhost:8080/ para ver la app en funcionamiento."
+
 
