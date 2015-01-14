@@ -39,7 +39,7 @@ Integrantes del grupo:
 
 [Aplicación funcionando](http://pruebadriveiv.appspot.com/)
 
-##Entorno de pruebas
+##Integración continua
 
 [Integración continua](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/integracion_continua.md)
 
