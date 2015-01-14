@@ -1,6 +1,6 @@
 #Script: Ejecutar un test de prueba
 
-Una vez que hemos instalado la jaula y todas las herramientas necesarias (scripts ["Crear una jaula en tu equipo"](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/crear_jaula.md) e ["Instalar y ejecutar SaraosOSL en el entorno de pruebas"](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/instalacion_saraososl.md) ) podemos ejecutar este script que realiza un test para comprobar el correcto funcionamiento de la aplicación:
+Una vez que hemos instalado la jaula y todas las herramientas necesarias (scripts ["Crear una jaula en tu equipo"](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/crear_jaula.md) e ["Instalar y ejecutar SaraosOSL en el entorno de pruebas"](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/instalacion_saraososl.md) ) podemos ejecutar este [script](https://github.com/miguelfabre/Proyecto/blob/master/script/ejecutar_test.sh) que realiza un test para comprobar el correcto funcionamiento de la aplicación insertando un nombre determinado y la fecha y hora en la que se ejecuta el script en una nueva fila de la hoja de cálculo de Google:
 
 i) Petición al servidor para que se ejecute una inserción 
 
