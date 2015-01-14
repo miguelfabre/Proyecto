@@ -1,3 +1,4 @@
+#Importación de bibliotecas
 import cgi
 import webapp2
 import time
@@ -5,12 +6,13 @@ import time
 import gdata.spreadsheet.service
 from google.appengine.api import users
 
-
+#Conexión para crear/modificar la hoja de cálculo en drive
 email = 'proyectoivosl@gmail.com'
 password = 'pakhires'
 spreadsheet_key = '1R3zLvtKxllRM71PdCDQu9XhNYo7xmf0On49WreyLi24' # key param
 worksheet_id = 'od6' # default
 
+#Formulario HTML
 
 MAIN_PAGE_HTML = """\
 <html>
@@ -26,6 +28,7 @@ MAIN_PAGE_HTML = """\
 </html>
 """
 
+#URL de la hoja de cálculo
 URL_SPREADSHEET_HTML = """\
 <html>
   <body>
@@ -35,13 +38,15 @@ URL_SPREADSHEET_HTML = """\
 </html>
 """
 
+#Manejador del formulario
 class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.write(MAIN_PAGE_HTML)
 
+#Manejador que lee los datos del formulario y realiza la inserción
 class Guestbook(webapp2.RequestHandler):
    def post(self):
-            client = gdata.spreadsheet.service.SpreadsheetsService()
+        client = gdata.spreadsheet.service.SpreadsheetsService()
 	    client.debug = True
 	    client.email = email
 	    client.password = password
@@ -60,6 +65,8 @@ class Guestbook(webapp2.RequestHandler):
 	    
 	    #return
 	    self.response.write(URL_SPREADSHEET_HTML)
+
+#Manejador para ejecutar el test	    
 class test(webapp2.RequestHandler):
    def get(self):
             client = gdata.spreadsheet.service.SpreadsheetsService()
@@ -82,6 +89,7 @@ class test(webapp2.RequestHandler):
 	    #return
 	    self.response.write(URL_SPREADSHEET_HTML)
 
+#Manejador de enlaces
 application = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/sign', Guestbook),
