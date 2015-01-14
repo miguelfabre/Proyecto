@@ -1,5 +1,4 @@
 # SaraosOSL: Gestión de eventos de la OSL
-========
 
 ## Introducción
 
@@ -31,7 +30,7 @@
 
 [Script: Ejecutar un test de prueba](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/ejecucion_test.md)
 
-========
+##Participación en el certamen de proyectos de la UGR
 Este proyecto participa en el "Certamen de proyectos de la UGR". Para ello es necesario incluir en este documento un enlace a las bases del concurso:
 
 [Bases del concurso](http://osl.ugr.es/bases-de-los-premios-a-proyectos-libres-de-la-ugr/)
