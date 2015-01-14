@@ -6,13 +6,13 @@ Para llevar a cabo esta integración continua hemos desarrollado un test que nos
 
 Los resultados de la ejecución se muestran en el terminal en el que estemos ejecutando el servidor. Podemos ver un ejemplo en la siguiente imagen:
 
-![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito%202/imagenes/hito3-ejecucion-test.png)
+![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito_3/imagenes/hito3-ejecucion-test.png)
 
 Donde podemos observar el mensaje "Se ha insertado con éxito"
 
 Podemos comprobar que efectivamente se ha realizado la inserción con éxito acudiendo a la hoja de cálculo de google:
 
-![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito%202/imagenes/hito3-comprobacion-test.png)
+![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito_3/imagenes/hito3-comprobacion-test.png)
 
 Como podemos observar la inserción contiene la fecha y hora en la que hemos realizado el test. Con ellas podemos comprobar cuál es la fila que acabamos de insertar y de esa forma no confundirnos.
 
