@@ -1,4 +1,4 @@
-# Despliegue de la aplicación y ejecución de test para comprobar su funcionamiento en x sencillos pasos
+# Despliegue de la aplicación y ejecución de test para comprobar su funcionamiento en 5 sencillos pasos (Ubuntu)
 
 ## 1. Descarga de la carpeta "script" de nuestro proyecto estos tres script
 
