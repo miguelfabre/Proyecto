@@ -35,13 +35,15 @@ Integrantes del grupo:
 
 [Script: Instalar y ejecutar SaraosOSL en el entorno de pruebas](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/instalacion_saraososl.md)
 
-[Script: Ejecutar un test de prueba](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/ejecucion_test.md)
-
 [Creación de jaula e instalación y ejecución de SaraosOSL paso a paso](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/saraososl_paso_a_paso.md)
+
+[Aplicación funcionando](http://pruebadriveiv.appspot.com/)
+
+##Entorno de pruebas
 
 [Integración continua](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/integracion_continua.md)
 
-[Aplicación funcionando](http://pruebadriveiv.appspot.com/)
+[Script: Ejecutar un test de prueba](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/ejecucion_test.md)
 
 ========
 Este proyecto participa en el "Certamen de proyectos de la UGR". Para ello es necesario incluir en este documento un enlace a las bases del concurso:
