@@ -1,4 +1,4 @@
-# SaraosOSL: Gestión de eventos de la OSL 
+# SaraosOSL: Gestión de eventos de la OSL
 
 ## Introducción
 
