@@ -1,31 +1,17 @@
 # SaraosOSL: Gestión de eventos de la OSL
 ========
 
-Descripción: gestión automática de alta de nuevos eventos con inclusión en blog y correo electrónico, así como calendario; creación o no de registro,
-hojas de control de asistencia y eventualmente generación de diplomas y registro del número de personas que han asistido eventualmente. Generación de
-informes sobre los eventos: lugar,asistencia.
-
-Integrantes del grupo:
-
-* Miguel Fabre Navarro
-* Francisco Porcel Sendrós
-
-========
-# Documentación
-
 ## Introducción
 
-[Descripción inicial](https://github.com/miguelfabre/Proyecto/blob/master/README.md)
+[Descripción inicial](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/descripcion_inicial.md)
 
 [Herramientas necesarias](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/requeriments.md)
-
 
 ##Google App Engine y webapp2
 
 [Google App Engine como PaaS](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/gap_como_paas.md)
 
 [Tu primera aplicación con Google App Engine](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/primera_app_gap.md)
-
 
 ##Entorno de pruebas
 
