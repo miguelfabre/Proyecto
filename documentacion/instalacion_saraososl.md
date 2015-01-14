@@ -12,19 +12,19 @@ ii) Configuramos el Locale para que no de errores
 
 iii) Instalamos python y una serie de herramientas necesarias
 
-```apt-get install python
+```apt-get install python```
 
-apt-get install python3-setuptools
+```apt-get install python3-setuptools```
 
-easy_install3 pip
+```easy_install3 pip```
 
-apt-get install python-dev build-essential
+```apt-get install python-dev build-essential```
 
-pip install WebOb
+```pip install WebOb```
 
-pip install Paste
+```pip install Paste```
 
-pip install webapp2```
+```pip install webapp2```
 
 iv) Instalamos wget para poder descargar archivos
 
