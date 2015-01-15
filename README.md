@@ -12,6 +12,10 @@
 
 [Tu primera aplicación con Google App Engine](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/primera_app_gap.md)
 
+##Despliege de la aplicación y ejecución de test (Ubuntu)
+
+[5 pasos para desplegar y probar SaraosOSL](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/despliegue_5_pasos.md)
+
 ##Entorno de pruebas
 
 [Jaula como entorno de pruebas](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/jaulas_chroot.md)
