@@ -77,12 +77,16 @@ class test(webapp2.RequestHandler):
 	    client.ProgrammaticLogin()
 	    
 	    rows = []
-	    rows.append({'id':'Prueba','title':time.strftime("%c")})	    
+	    tiempo = time.strftime("%c")
+	    rows.append({'id':'Prueba','title':tiempo})	    
 
 	    for row in rows:
 		try:
 			client.InsertRow(row, spreadsheet_key, worksheet_id)
 			print "Se ha insertado con exito"
+			print "Se ha insertado con exito"
+			print "id = Prueba"
+			print "title = "+tiempo
 		except ValueError:
 		    print "No se ha podido insertar"
 	    
