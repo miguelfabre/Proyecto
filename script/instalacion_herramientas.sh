@@ -31,6 +31,4 @@ apt-get install -y git
 git clone https://github.com/FranciscoPorcel/Fuentes.git
 #Ejecutamos la aplicacion
 python google_appengine/dev_appserver.py Fuentes/pruebadriveiv/
-#Ahora nos vamos al navegador y escribimos http://localhost:8080/
-
 
