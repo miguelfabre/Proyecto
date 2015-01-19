@@ -29,6 +29,6 @@ apt-get install curl
 apt-get install -y git
 # Clonamos la carpeta en donde se encuentran los ficheros fuentes de la aplicacion
 git clone https://github.com/FranciscoPorcel/Fuentes.git
-#Ejecutamos la aplicacion
-python google_appengine/dev_appserver.py Fuentes/pruebadriveiv/
+#Ejecutamos la aplicacion en la dirección 0.0.0.0 que es donde está definido el 'localhost' en Koding
+python google_appengine/dev_appserver.py --host=0.0.0.0 Fuentes/pruebadriveiv/
 
