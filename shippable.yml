@@ -1,0 +1,39 @@
+#################################################################
+language: python
+
+python:
+  - "2.7"
+
+#Desplegar SaraosOSL en GAE
+env:
+  global:
+    - GAE_DIR=/tmp/gae
+    - EMAIL=miguel92grnd@gmail.com
+    - secure: AAAAB3NzaC1yc2EAAAADAQABAAABAQDc3RNIAJX5OTLVVEqP7WChgCNIu+GRaC3vmTUdU908W99knaEXOwXMDAxlAiv896YzJEG+BSKPfYBifhEkO614FnIpG/77ucxtk+9ERSH339SN8sZijunfC2HHo79u06m+UWRqjvdvx0R7D8iCKl2hYh3jmQ2vTCZ0ANZ2e2CvwWd8opmWf73VgBqV09GLyaHPGcqYpk/mmJ5t600ZqT2nF9bgvxGao9OH6pH/+66KIG4umzQCVGL3p9/zaRbQqNBINbDaBHPRqbYbL1BwjN1R7Gvz8I3D0MsIDnQaIJYTT92Q9P4dcRFVp8b4bJXHb+72vKglX8D5m4PLKVyMZl0V 54b578484051091100de7a64
+
+before_install:
+  - >
+    test -e $GAE_DIR || 
+    (mkdir -p $GAE_DIR && 
+     wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.6.zip -q -O /tmp/gae.zip &&
+     unzip /tmp/gae.zip -d $GAE_DIR)
+     
+#Instalar requeriments
+install:
+   - pip install -r requirements.txt
+
+
+before_script:
+   - mkdir -p shippable/testresults
+   - mkdir -p shippable/codecoverage
+
+#Ejecutamos el script
+script:
+  - >
+    nosetests test.py
+    --with-gae --without-sandbox --gae-lib-root=$GAE_DIR/google_appengine
+    --with-xunit --xunit-file=shippable/testresults/test.xml
+    --with-coverage --cover-xml --cover-xml-file=shippable/codecoverage/coverage.xml
+#Si se construye bien hacer esto
+after_success:
+    - $GAE_DIR/google_appengine/appcfg.py --oauth2_access_token=$GAE_TOKEN update .
