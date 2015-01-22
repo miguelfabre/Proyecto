@@ -3,27 +3,25 @@
 # Montamos el sistema de ficheros /proc
 mount -t proc proc /proc
 # Configuramos el Locale para que no de errores 
-apt-get install language-pack-es
+apt-get install language-pack-es -y
 # Instalamos python y una serie de herramientas necesarias
-apt-get install python
-apt-get install python3-setuptools
+apt-get install python -y
+apt-get install python3-setuptools -y
 easy_install3 pip
-apt-get install python-dev build-essential
-pip install WebOb
+apt-get install python-dev build-essential -y
+pip install WebOb 
 pip install Paste
 pip install webapp2
 # Instalamos wget para poder descargar archivos
 apt-get install wget
 #Instalamos curl para posteriormente poder realizar los test de pruebas
-apt-get install curl
+apt-get install curl -y
 # Descargamos el sdk de Google App Engine
 wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.17.zip --no-check-certificate
 # Instalamos la herramienta zip
-apt-get install zip
+apt-get install zip -y
 # Descomprimimos el fichero descargado, con lo que ya tendremos disponibles las herramientas del sdk
 unzip google_appengine_1.9.17.zip
-# Instalamos la herramienta cURL para hacer uso de ésta a la hora de ejecutar los tests
-apt-get install curl
 # Una vez hecho esto ya tenemos instalado el entorno de desarrollo necesario para construir y ejecutar aplicaciones que luego funcionarán bajo Google App Engine
 # Instalamos git
 apt-get install -y git

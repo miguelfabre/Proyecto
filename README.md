@@ -14,7 +14,7 @@
 
 ##Despliege de la aplicación y ejecución de test (Ubuntu)
 
-[5 pasos para desplegar y probar SaraosOSL](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/despliegue_5_pasos.md)
+[3 pasos para desplegar y probar SaraosOSL](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/despliegue_3_pasos.md)
 
 ##Entorno de pruebas
 
