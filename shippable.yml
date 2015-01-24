@@ -8,7 +8,7 @@ python:
 env:
   global:
     - GAE_DIR=/tmp/gae
-    - GAE_PASS=helterskelter8
+    - GAE_PASSWORD=helterskelter8
     - EMAIL=miguel92grnd@gmail.com
     - secure: izEnXLzkUHIX9KvSdhlZ6JnzSgXcrmvzcvqgEoMTRJId1mNXn2H9XyW1SbjLg32akqC1/9w6umjcxMCICEW7JqSijYW1d2AWBBFKhxKIHw7EpVbyz9E3KWgGoLuRrOc28gXX/YcD1YlTAMnnRx7Bg2QpjzttcfkBuf6XzjDPmr9xklTKyiGK/eWWT0iLGgTskizBL4iJFcC7DVQK+/hc2J8NGFnKO91ZRS7QsCg54VxTIqSBO5y6Hc2XvNjxd6GeAIY/PYtEwv/IjycUHPL8IzzFK+GNSmSe9YlCtkAWKEXWCOzwkRPMzqKXNGDbrCl7AaA1oWqugSA7NqSKNmbV9Q==
 
@@ -35,4 +35,4 @@ script:
 
 #Si se construye bien hacer esto
 after_success:
-    $GAE_DIR/google_appengine/appcfg.py -e "$EMAIL" -p "$GAE_PASS" update .
+    - echo $GAE_PASSWORD | $GAE_DIR/google_appengine/appcfg.py -e $EMAIL --passin update .
