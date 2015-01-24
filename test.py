@@ -1,7 +1,7 @@
 import unittest
 from google.appengine.ext import db
 from google.appengine.ext import testbed
-from pruebadrive import Test
+from pruebadriveiv import Test
 
 class InsertTestCase(unittest.TestCase):
     def setUp(self):
@@ -13,7 +13,7 @@ class InsertTestCase(unittest.TestCase):
         self.testbed.deactivate()
 
 	def test(self):
-		saraos = Saraos()
+		test = Test()
 		response = saraos.Inserta('OK')
 		self.assertEqual(response, 'OK')
 
