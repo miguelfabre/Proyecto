@@ -59,10 +59,10 @@ class Guestbook(webapp2.RequestHandler):
 	    #rows.append({'id':'123','title':'12313'})	    
 
 		for row in rows:
-		try:
-			client.InsertRow(row, spreadsheet_key, worksheet_id)
-		except Exception as e:
-		print e
+			try:
+				client.InsertRow(row, spreadsheet_key, worksheet_id)
+			except Exception as e:
+				print e
 	    
 	    #return
 		self.response.write(URL_SPREADSHEET_HTML)
@@ -88,8 +88,8 @@ class Test(webapp2.RequestHandler):
 			try:
 				client.InsertRow(row, spreadsheet_key, worksheet_id)
 			except ValueError:
-			print "No se ha podido insertar"
-			valor = "error"
+				print "No se ha podido insertar"
+				valor = "error"
 		
 		return valor
 
