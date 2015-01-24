@@ -49,23 +49,23 @@ class Guestbook(webapp2.RequestHandler):
 	def post(self):
 		client = gdata.spreadsheet.service.SpreadsheetsService()
 		client.debug = True
-	    client.email = email
-	    client.password = password
-	    client.source = 'test client'
-	    client.ProgrammaticLogin()
+		client.email = email
+		client.password = password
+		client.source = 'test client'
+		client.ProgrammaticLogin()
 	    
-	    rows = []
-	    rows.append({'id':cgi.escape(self.request.get('nombre')),'title':cgi.escape(self.request.get('descripcion'))})
+		rows = []
+		rows.append({'id':cgi.escape(self.request.get('nombre')),'title':cgi.escape(self.request.get('descripcion'))})
 	    #rows.append({'id':'123','title':'12313'})	    
 
-	    for row in rows:
+		for row in rows:
 		try:
-		    client.InsertRow(row, spreadsheet_key, worksheet_id)
+			client.InsertRow(row, spreadsheet_key, worksheet_id)
 		except Exception as e:
-		    print e
+		print e
 	    
 	    #return
-	    self.response.write(URL_SPREADSHEET_HTML)
+		self.response.write(URL_SPREADSHEET_HTML)
 
 #Manejador para ejecutar el test	    
 class Test(webapp2.RequestHandler):
