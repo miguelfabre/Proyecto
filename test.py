@@ -1,6 +1,7 @@
 import unittest
 from google.appengine.ext import db
 from google.appengine.ext import testbed
+from pruebadrive import Test
 
 class EvengeTestCase(unittest.TestCase):
     def setUp(self):
@@ -10,6 +11,12 @@ class EvengeTestCase(unittest.TestCase):
 
     def tearDown(self):
         self.testbed.deactivate()
+
+	def test(self):
+    	saraos = Saraos()
+    	response = saraos.Inserta('OK')
+    	self.assertEqual(response, 'OK')
+
 
 
 if __name__ == "__main__":

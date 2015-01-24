@@ -67,9 +67,12 @@ class Guestbook(webapp2.RequestHandler):
 	    self.response.write(URL_SPREADSHEET_HTML)
 
 #Manejador para ejecutar el test	    
-class test(webapp2.RequestHandler):
-   def get(self):
-            client = gdata.spreadsheet.service.SpreadsheetsService()
+class Test(webapp2.RequestHandler):
+   	def get(self):
+		self.response.write(URL_SPREADSHEET_HTML)
+
+	def Inserta(self,valor):
+    	client = gdata.spreadsheet.service.SpreadsheetsService()
 	    client.debug = True
 	    client.email = email
 	    client.password = password
@@ -83,21 +86,20 @@ class test(webapp2.RequestHandler):
 	    for row in rows:
 		try:
 			client.InsertRow(row, spreadsheet_key, worksheet_id)
-			print "Se ha insertado con exito"
-			print "Se ha insertado con exito"
-			print "id = Prueba"
-			print "title = "+tiempo
+			#print "Se ha insertado con exito"
+			#print "Se ha insertado con exito"
+			#print "id = Prueba"
+			#print "title = "+tiempo
 		except ValueError:
 		    print "No se ha podido insertar"
-	    
-	    #return
-	    self.response.write(URL_SPREADSHEET_HTML)
+			valor = "error"
+		return valor
 
 #Manejador de enlaces
 application = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/sign', Guestbook),
-    ('/test', test)
+    ('/test', Test)
 ], debug=True)
 
 
