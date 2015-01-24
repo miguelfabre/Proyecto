@@ -3,7 +3,7 @@ from google.appengine.ext import db
 from google.appengine.ext import testbed
 from pruebadrive import Test
 
-class EvengeTestCase(unittest.TestCase):
+class InsertTestCase(unittest.TestCase):
     def setUp(self):
         self.testbed = testbed.Testbed()
         self.testbed.activate()
@@ -13,9 +13,9 @@ class EvengeTestCase(unittest.TestCase):
         self.testbed.deactivate()
 
 	def test(self):
-    	saraos = Saraos()
-    	response = saraos.Inserta('OK')
-    	self.assertEqual(response, 'OK')
+		saraos = Saraos()
+		response = saraos.Inserta('OK')
+		self.assertEqual(response, 'OK')
 
 
 
