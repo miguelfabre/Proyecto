@@ -46,9 +46,9 @@ class MainPage(webapp2.RequestHandler):
 
 #Manejador que lee los datos del formulario y realiza la inserción
 class Guestbook(webapp2.RequestHandler):
-   def post(self):
-        client = gdata.spreadsheet.service.SpreadsheetsService()
-	    client.debug = True
+	def post(self):
+		client = gdata.spreadsheet.service.SpreadsheetsService()
+		client.debug = True
 	    client.email = email
 	    client.password = password
 	    client.source = 'test client'
