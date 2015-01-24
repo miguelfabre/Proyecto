@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #Importación de bibliotecas
 import cgi
 import webapp2
