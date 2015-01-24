@@ -69,31 +69,28 @@ class Guestbook(webapp2.RequestHandler):
 
 #Manejador para ejecutar el test	    
 class Test(webapp2.RequestHandler):
-   	def get(self):
+	def get(self):
 		self.response.write(URL_SPREADSHEET_HTML)
 
 	def Inserta(self,valor):
-    	client = gdata.spreadsheet.service.SpreadsheetsService()
-	    client.debug = True
-	    client.email = email
-	    client.password = password
-	    client.source = 'test client'
-	    client.ProgrammaticLogin()
+		client = gdata.spreadsheet.service.SpreadsheetsService()
+		client.debug = True
+		client.email = email
+		client.password = password
+		client.source = 'test client'
+		client.ProgrammaticLogin()
 	    
-	    rows = []
-	    tiempo = time.strftime("%c")
-	    rows.append({'id':'Prueba','title':tiempo})	    
+		rows = []
+		tiempo = time.strftime("%c")
+		rows.append({'id':'Prueba','title':tiempo})	    
 
-	    for row in rows:
-		try:
-			client.InsertRow(row, spreadsheet_key, worksheet_id)
-			#print "Se ha insertado con exito"
-			#print "Se ha insertado con exito"
-			#print "id = Prueba"
-			#print "title = "+tiempo
-		except ValueError:
-		    print "No se ha podido insertar"
+		for row in rows:
+			try:
+				client.InsertRow(row, spreadsheet_key, worksheet_id)
+			except ValueError:
+			print "No se ha podido insertar"
 			valor = "error"
+		
 		return valor
 
 #Manejador de enlaces
