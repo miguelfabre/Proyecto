@@ -70,6 +70,7 @@ class Guestbook(webapp2.RequestHandler):
 #Manejador para ejecutar el test	    
 class Test(webapp2.RequestHandler):
 	def get(self):
+		Inserta('OK')
 		self.response.write(URL_SPREADSHEET_HTML)
 
 	def Inserta(self,valor):

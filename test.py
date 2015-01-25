@@ -12,10 +12,10 @@ class InsertTestCase(unittest.TestCase):
     def tearDown(self):
         self.testbed.deactivate()
 
-	def test(self):
-		test = Test()
-		response = saraos.Inserta('OK')
-		self.assertEqual(response, 'OK')
+    def test(self):
+	test = Test()
+	response = test.Inserta('OK')
+	self.assertEqual(response, 'OK')
 
 
 
