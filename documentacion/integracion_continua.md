@@ -1,19 +1,25 @@
 # Integración continua
 
-La integración continua consiste en hacer integraciones automáticas de un proyecto lo más a menudo posible para así poder detectar fallos cuanto antes. Entendemos por integración la compilación y ejecución de pruebas en un proyecto. 
+##¿En qué consiste?
 
-Para llevar a cabo esta integración continua hemos desarrollado un test que nos permite comprobar si se pueden insertar datos en una hoja de cálculo de Google desde nuestra aplicación (lo cual constituye la base de nuestro proyecto). Este test, realiza una inserción en la hoja de cálculo compuesta por un nombre predeterminado (en nuestro caso "Prueba") y por la hora y fecha del momento en el que se ha realizado el test (mediante la función ```time.strftime("%c"))``` disponible en Python). 
+La integración continua consiste en hacer integraciones automáticas de un proyecto lo más a menudo posible para así poder detectar fallos cuanto antes. Entendemos por integración la compilación y ejecución de pruebas en un proyecto. [Wikipedia](http://es.wikipedia.org/wiki/Integraci%C3%B3n_continua)
 
-Los resultados de la ejecución se muestran en el terminal en el que estemos ejecutando el servidor. Podemos ver un ejemplo en la siguiente imagen:
+Para llevar a cabo la integración continua de nuestro proyecto, hemos hecho uso de la herramienta [Shippable](https://www.shippable.com/). 
 
-![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito_3/imagenes/hito3-ejecucion-test.png)
+##Shippable
 
-Donde podemos observar el mensaje "Se ha insertado con éxito"
+Shippable es una herramienta que permite, a través de tu cuenta de Git, acceder a todos tus repositorios, desplegar tu aplicación y ejecutar un test si éste está definido. 
 
-Podemos comprobar que efectivamente se ha realizado la inserción con éxito acudiendo a la hoja de cálculo de google:
+Para nuestra aplicación, hemos diseñado un test que realiza una inserción en la hoja de cálculo de Google Drive habilitada para el proyecto. Con esto comprobamos que la aplicación está funcionando correctamente ya que dicho test está definido en el fichero principal de la aplicación [pruebadrive.py](https://github.com/miguelfabre/Proyecto/blob/master/pruebadriveiv.py), por lo que para poder ejecutarse el test debe estar funcionado la aplicación.
 
-![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito_3/imagenes/hito3-comprobacion-test.png)
+Este test es ejecutado por Shippable, por lo tanto, en el archivo de configuración de shippable, [shippable.yml](https://github.com/miguelfabre/Proyecto/blob/master/shippable.yml), habrá que hacer una llamada a [test.py](https://github.com/miguelfabre/Proyecto/blob/master/test.py) que es el que hace la llamada a la clase Test definida en el archivo principal de la aplicación.
 
-Como podemos observar la inserción contiene la fecha y hora en la que hemos realizado el test. Con ellas podemos comprobar cuál es la fila que acabamos de insertar y de esa forma no confundirnos.
+Cada cambio hecho en directorio de la aplicación será detectado por Shippable, que comprobará que todo sigue funcionando correctamente notificandonos de ello vía mail. 
+
+Aquí podemos ver una prueba de que nuestra aplicación supera el test.
+
+![](https://github.com/miguelfabre/Proyecto/tree/master/imagenes/Hito_3/imagenes/shippable.png)
+
+
 
 
