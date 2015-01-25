@@ -9,9 +9,9 @@ apt-get install python -y
 apt-get install python3-setuptools -y
 easy_install3 pip
 apt-get install python-dev build-essential -y
-pip install WebOb 
-pip install Paste
-pip install webapp2
+easy_install3 Paste 
+easy_install3 Paste
+easy_install3 webapp2
 # Instalamos wget para poder descargar archivos
 apt-get install wget
 #Instalamos curl para posteriormente poder realizar los test de pruebas

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Instalación de debootstrap
-apt-get install debootstrap
+apt-get install debootstrap -y
 # Creación de una nueva distro
 debootstrap --arch=i386 saucy /home/jaulas/saucy32/ http://archive.ubuntu.com/ubuntu
 # Copiamos dentro de la jaula el segundo script que tendremos que ejecutar para facilitar el proceso
