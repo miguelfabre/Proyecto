@@ -14,4 +14,6 @@ Google App Engine soporta todo tipo de frameworks para Python como Django, Cherr
 
 Las jaulas chroot permiten ejecutar un proceso bajo un directorio raíz simulado, de manera que el proceso no puede acceder a archivos fuera de ese directorio. Se utiliza principalmente para probar programas sospechosos o peligrosos en un entorno seguro y para enjaular un servicio de red de manera que quede limitado el entorno de ese servicio y acceda sólo a lo que debe, evitando que escale accesos. Esta utilidad se puede instalar siguiendo los pasos de este [script](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/crear_jaula.md) 
 
+#Shippable
 
+Shippable es una herramienta útil para integración continua que permite, a través de tu cuenta de Git, acceder a todos tus repositorios, desplegar tu aplicación y ejecutar un test si éste está definido.

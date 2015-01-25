@@ -28,7 +28,7 @@
 
 [Aplicación funcionando](http://pruebadriveiv.appspot.com/)
 
-##Integración continua
+##Integración continua (Shippable)
 
 [Integración continua](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/integracion_continua.md)
 

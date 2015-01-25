@@ -1,4 +1,4 @@
-# Integración continua
+# Integración continua (Shippable)
 
 ##¿En qué consiste?
 
@@ -18,7 +18,7 @@ Cada cambio hecho en directorio de la aplicación será detectado por Shippable,
 
 Aquí podemos ver una prueba de que nuestra aplicación supera el test.
 
-![](https://github.com/miguelfabre/Proyecto/tree/master/imagenes/Hito_3/imagenes/shippable.png)
+![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito_3/imagenes/shippable.png)
 
 
 
