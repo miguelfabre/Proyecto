@@ -55,8 +55,7 @@ class Guestbook(webapp2.RequestHandler):
 		client.ProgrammaticLogin()
 	    
 		rows = []
-		rows.append({'id':cgi.escape(self.request.get('nombre')),'title':cgi.escape(self.request.get('descripcion'))})
-	    #rows.append({'id':'123','title':'12313'})	    
+		rows.append({'id':cgi.escape(self.request.get('nombre')),'title':cgi.escape(self.request.get('descripcion'))})  
 
 		for row in rows:
 			try:
@@ -72,7 +71,7 @@ class Test(webapp2.RequestHandler):
 	def get(self):
 		Inserta('OK')
 		self.response.write(URL_SPREADSHEET_HTML)
-
+	#Funcion que se encarga de realizar la insercion. En caso de que no la realice de forma correcta el valor de la variable valor sera "error". Por otro lado si se realiza con exito, conservara su valor, que es "OK"
 	def Inserta(self,valor):
 		client = gdata.spreadsheet.service.SpreadsheetsService()
 		client.debug = True
