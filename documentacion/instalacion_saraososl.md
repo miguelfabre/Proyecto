@@ -1,6 +1,8 @@
 # Script: Instalar y ejecutar SaraosOSL en el entorno de pruebas
 
-Para la instalación y ejecución la aplicación SaraosOSL, una vez creado el entorno de pruebas, basta con ejecutar uno a uno los comandos que se describen a continuación o ejecutar el script [instalacion_herramientas.sh](https://github.com/miguelfabre/Proyecto/blob/master/script/instalacion_herramientas.sh): 
+En este documento se explican los pasos que se dan en el script [instalacion_herramientas.sh](https://github.com/miguelfabre/Proyecto/blob/master/script/instalacion_herramientas.sh) para crear la instalación y ejecución de nuestra aplicación (una vez realizada la creación de la jaula que se recoge en [creacion_jaula.sh](https://github.com/miguelfabre/Proyecto/blob/master/script/creacion_jaula.sh)).
+
+* Podemos ejecutar el script [despliegue.sh](https://github.com/miguelfabre/Proyecto/blob/master/script/despliegue.sh) de tal forma que se realice el despliegue completo del entorno de pruebas. Este script incluye la ejecución del que se explica en este documento y de [creacion_jaula.sh](https://github.com/miguelfabre/Proyecto/blob/master/script/creacion_jaula.sh)).  
 
 i) Montamos el sistema de ficheros /proc
 
@@ -54,11 +56,11 @@ ix) Instalamos git
 
 x) Clonamos la carpeta en donde se encuentran los ficheros fuentes de la aplicacion
 
-```git clone https://github.com/FranciscoPorcel/Fuentes.git```
+```git clone https://github.com/miguelfabre/pruebadriveiv.git```
 
 xi) Ejecutamos la aplicacion
 
-```python google_appengine/dev_appserver.py Fuentes/pruebadriveiv/```
+```python google_appengine/dev_appserver.py pruebadriveiv/```
 
 xii) Ahora nos vamos al navegador y escribimos http://localhost:8080/
 

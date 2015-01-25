@@ -1,17 +1,16 @@
 #Creación de jaula e instalación y ejecución de SaraosOSL paso a paso
 
-A continuación, vamos a explicar paso a paso como se ha llevado a cabo la resolución del tercer hito de la asignatura. En éste se pedía, diseñar usando alguna de los sistemas de aislamiento de recursos vistos en los ejercicios,un contenedor o jaula con el que se pueda probar fácilmente en esta fase la aplicación que se está diseñando.
-
-Además, hemos avanzado en el diseño y funcionalidad de nuestra aplicación llevándola a un nivel más cercano de su estado final. Para ello, hemos incluido un sencillo formulario que incluirá los datos dados en una hoja de cálculo de Google Drive.
-De esta forma, nuestra aplicación se encuentra en un estado casi final de desarrollo, quedando únicamente por ultimar los campos que el cliente quiera tener en su formulario e incluir un calendario de eventos (Google Calendar).
+A continuación, vamos a explicar paso a paso como se ha llevado a cabo la resolución del tercer hito de la asignatura. En éste se pedía, diseñar usando alguna de los sistemas de aislamiento de recursos vistos en los ejercicios,un contenedor o jaula con el que se pueda probar fácilmente en esta fase la aplicación que se está diseñando. Además había que realizar integración continua y un test de comprobación.
 
 ##Introducción
 
-Haciendo uso de las herramientas vistas en las prácticas, vamos a proceder a crear un sistema mínimo en el cual crearemos una jaula que nos servirá como entorno de pruebas de nuestra aplicación. En ella instalaremos el SDK de Google App Engine con el que estamos trabajando y probaremos de forma local que nuestra aplicación funciona correctamente.
+Haciendo uso de las herramientas vistas en las prácticas, vamos a proceder a crear un sistema mínimo en el cual crearemos una jaula que nos servirá como entorno de pruebas de nuestra aplicación. En ella instalaremos el SDK de Google App Engine con el que estamos trabajando y probaremos de forma local que nuestra aplicación funciona correctamente. Además usaremos Shippable para integración continua e introduciremos un test que nos permite comprobar si se realizan inserciones en la hoja de cálculo de Google Drive asociada a nuestro proyecto.
+
+Para el despliegue de la aplicación en una jaula podemos utilizar el script [despliegue.sh](https://github.com/miguelfabre/Proyecto/blob/master/script/despliegue.sh), que crea dicha jaula y además instala en ella todas las herramientas necesarias para la ejecución de nuestra aplicación.
 
 ##Paso 1: Creación de un sistema mínimo usando debootstrap
 
-*Todas las ordenes de éste paso pueden ser ejecutadas haciendo uso del script [creacion_jaula.sh](https://github.com/miguelfabre/Proyecto/blob/master/script/creacion_jaula.sh)*
+* Todas las ordenes de éste paso pueden ser ejecutadas haciendo uso del script [creacion_jaula.sh](https://github.com/miguelfabre/Proyecto/blob/master/script/creacion_jaula.sh)
 
 En primer lugar, creamos un sistema mínimo usando debootstrap. En caso de no tener dicha herramienta instalada, procedemos de la manera habitual.
 
@@ -39,14 +38,13 @@ Ahora configuramos el Locale para que no de errores (como se detalla en el tema 
 
 ##Paso 2: Instalación de herramientas necesarias para el entorno de pruebas
 
-*Todas las ordenes de éste paso pueden ser ejecutadas haciendo uso del script [instalacion_herramientas.sh](https://github.com/miguelfabre/Proyecto/blob/master/Hito_3/script/instalacion_herramientas.sh) previa ejecución del script creacion_jaula.sh*
+* Todas las ordenes de éste paso pueden ser ejecutadas haciendo uso del script [instalacion_herramientas.sh](https://github.com/miguelfabre/Proyecto/blob/master/Hito_3/script/instalacion_herramientas.sh) previa ejecución del script [creacion_jaula.sh](https://github.com/miguelfabre/Proyecto/blob/master/script/creacion_jaula.sh) 
 
 Con el fin de crear un entorno de pruebas adecuado para probar nuestra aplicación, vamos a instalar el framework del que haremos uso (webapp2) e instalaremos el lenguaje en el que hemos desarrollado nuestra apalicación (python).
 
 Instalamos python:
 
 ![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito_3/imagenes/hito3-4.png)
-
 
 A continuación, dado que haremos uso de la herramienta 'pip' para la instalación de webapp2, instalamos 'pip':
 
@@ -73,7 +71,6 @@ Y lo descomprimimos:
 ```unzip google_appengine_1.9.17.zip ``` 
 
 
-
 ##Paso 3: Ejecución de la aplicación
 
 Una vez hecho esto ya tenemos instalado el entorno de desarrollo necesario para construir y ejecutar aplicaciones que luego funcionarán bajo Google App Engine
@@ -84,11 +81,11 @@ Instalamos git
 
 Clonamos la carpeta en donde se encuentran los ficheros fuentes de la aplicacion
 
-```git clone https://github.com/FranciscoPorcel/Fuentes.git```
+```git clone https://github.com/miguelfabre/pruebadriveiv.git```
 
 Ejecutamos la aplicacion
 
-```python google_appengine/dev_appserver.py Fuentes/pruebadriveiv/```
+```python google_appengine/dev_appserver.py pruebadriveiv/```
 
 ![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito_3/imagenes/hito3-12.png)
 
@@ -106,5 +103,5 @@ Si pinchamos, podemos ver que la inserción se ha realizado con éxito:
 
 ![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito_3/imagenes/hito3-15.png)
 
-Como vemos, todo funciona correctamente a nivel local. Tú lo puedes probar en la red en [pruebadriveiv](http://pruebadriveiv.appspot.com)
+Como vemos, todo funciona correctamente a nivel local. Tú lo puedes probar en la red en [SaraosOSL](http://pruebadriveiv.appspot.com)
 

@@ -14,7 +14,7 @@
 
 ##Despliege de la aplicación y ejecución de test (Ubuntu)
 
-[3 pasos para desplegar y probar SaraosOSL](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/despliegue_3_pasos.md)
+[2 pasos para desplegar y probar SaraosOSL](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/despliegue_2_pasos.md)
 
 ##Entorno de pruebas
 
@@ -31,8 +31,6 @@
 ##Integración continua
 
 [Integración continua](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/integracion_continua.md)
-
-[Script: Ejecutar un test de prueba](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/ejecucion_test.md)
 
 ##Participación en el certamen de proyectos de la UGR
 Este proyecto participa en el "Certamen de proyectos de la UGR". Para ello es necesario incluir en este documento un enlace a las bases del concurso:
