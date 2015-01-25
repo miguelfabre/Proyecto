@@ -17,7 +17,7 @@ class InsertTestCase(unittest.TestCase):
 		response = saraos.Inserta('OK')
 		self.assertEqual(response, 'OK')
 
-
+ 
 
 if __name__ == "__main__":
 	unittest.main()
