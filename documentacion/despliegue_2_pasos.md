@@ -1,6 +1,6 @@
 # Despliegue de la aplicación en 2 sencillos pasos (Ubuntu)
 
-## 1. Descarga de la carpeta "script" de nuestro proyecto estos 4 script
+## 1. Descarga de la carpeta "script" de nuestro proyecto estos 3 script
 
 * [creacion_jaula.sh] (https://github.com/miguelfabre/Proyecto/blob/master/script/creacion_jaula.sh)
 * [instalacion_herramientas.sh] (https://github.com/miguelfabre/Proyecto/blob/master/script/instalacion_herramientas.sh)
