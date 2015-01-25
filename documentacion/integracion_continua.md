@@ -8,6 +8,8 @@ Para llevar a cabo la integración continua de nuestro proyecto, hemos hecho uso
 
 ##Shippable
 
+IMPORTANTE: Para poder hacer uso de shippable una vez clonado el repositorio de la aplicación, deberás añadir a [shippable.yml](https://github.com/miguelfabre/Proyecto/blob/master/shippable.yml) tu cuenta de correo, tu contraseña y tu clave ssh-rsa de Shippable.
+
 Shippable es una herramienta que permite, a través de tu cuenta de Git, acceder a todos tus repositorios, desplegar tu aplicación y ejecutar un test si éste está definido. 
 
 Para nuestra aplicación, hemos diseñado un test que realiza una inserción en la hoja de cálculo de Google Drive habilitada para el proyecto. Con esto comprobamos que la aplicación está funcionando correctamente ya que dicho test está definido en el fichero principal de la aplicación [pruebadrive.py](https://github.com/miguelfabre/Proyecto/blob/master/pruebadriveiv.py), por lo que para poder ejecutarse el test debe estar funcionado la aplicación.
@@ -19,6 +21,8 @@ Cada cambio hecho en directorio de la aplicación será detectado por Shippable,
 Aquí podemos ver una prueba de que nuestra aplicación supera el test.
 
 ![](https://github.com/miguelfabre/Proyecto/blob/master/imagenes/Hito_3/imagenes/shippable.png)
+
+
 
 
 
