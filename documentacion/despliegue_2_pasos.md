@@ -1,5 +1,7 @@
 # Despliegue de la aplicación en 2 sencillos pasos (Ubuntu)
 
+* Cabe destacar que tenemos el despliegue de la aplicación realizado con chef, pero como este no era un requisito del hito 3 no lo hemos incluido. Para el hito final sustituiremos estos scripts por una única "receta" de chef.
+
 ## 1. Descarga de la carpeta "script" de nuestro proyecto estos 3 script
 
 * [creacion_jaula.sh] (https://github.com/miguelfabre/Proyecto/blob/master/script/creacion_jaula.sh)
