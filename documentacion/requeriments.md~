@@ -17,12 +17,3 @@ Las jaulas chroot permiten ejecutar un proceso bajo un directorio raíz simulado
 #Shippable
 
 Shippable es una herramienta útil para integración continua que permite, a través de tu cuenta de Git, acceder a todos tus repositorios, desplegar tu aplicación y ejecutar un test si éste está definido.
-
-#Bootstrap
-
-Bootstrap es el framework de Twitter que permite crear interfaces web con CSS y Javascript que adaptan la interfaz dependiendo del tamaño del dispositivo en el que se visualice de forma nativa, es decir, automáticamente se adapta al tamaño de un ordenador o de una Tablet sin que el usuario tenga que hacer nada, esto se denomina diseño adaptativo o Responsive Design.
-
-#Chef
-
-Chef es una herramienta que, en general, se usa en un servidor con el fin de automatizar el proceso de aprovisionamiento de una aplicación. No es sencillo de utlizar pero es rápido y eficaz.
-
