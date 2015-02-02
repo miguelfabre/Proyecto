@@ -26,3 +26,13 @@ Bootstrap es el framework de Twitter que permite crear interfaces web con CSS y 
 
 Chef es una herramienta que, en general, se usa en un servidor con el fin de automatizar el proceso de aprovisionamiento de una aplicación. No es sencillo de utlizar pero es rápido y eficaz.
 
+#Jinja2
+
+Jinja2 es un motor de plantillas con todas las funciones de Python utilizado para renderizar nuestros script en Python a una salida HTML de una forma muy simple y rápida. Tiene soporte completo de Unicode, un entorno de ejecución, seguridad incorporada, utilizada por grandes proyectos y se encuentra bajo los términos de la licencia BSD.
+
+#Google Calendar
+
+Google Calendar, es una agenda y calendario electrónico desarrollado por Google. Permite sincronizarlo con los contactos de Gmail de manera que podamos invitarlos y compartir eventos. Está disponible desde el 13 de abril de 2006. Aunque los usuarios no están obligados a tener una cuenta de Gmail, sí deben disponer de un Google Account para poder usar el software.
+
+
+
