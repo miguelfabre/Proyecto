@@ -37,29 +37,29 @@ service = build('calendar', 'v3', developerKey='AIzaSyDwEDO-Qa3ep2l6kP2e_r6ivjKF
 #Blog de la aplicacion donde se visualizan los eventos registrados
 class MainPage(webapp2.RequestHandler):
     def get(self):
-		gc = gspread.login(email, password)
-		sht1 = gc.open_by_key(spreadsheet_key)
-		worksheet = sht1.get_worksheet(0)
-		matriz = []
-		num_cols = worksheet.col_count
-		num_fils = worksheet.row_count
-		#Metemos un bucle que recorra toda la hoja y vamos almacenando los datos en una matriz (array de array)
-		i = 1
+	gc = gspread.login(email, password)
+	sht1 = gc.open_by_key(spreadsheet_key)
+	worksheet = sht1.get_worksheet(0)
+	matriz = []
+	num_cols = worksheet.col_count
+	num_fils = worksheet.row_count
+	#Metemos un bucle que recorra toda la hoja y vamos almacenando los datos en una matriz (array de array)
+	i = 1
+	j = 1
+	while i < num_fils:
+		matriz.append([])
+		while j <= num_cols:
+	#Recorremos el documento de forma inversa para mostrar en el blog primero los eventos mas actuales (insertados los ultimos en la hoja de calculo
+			val = worksheet.cell(num_fils-i+1, j).value
+			matriz[i-1].append(val)
+			j = j + 1
+		i = i + 1
 		j = 1
-		while i < num_fils:
-			matriz.append([])
-			while j <= num_cols:
-		#Recorremos el documento de forma inversa para mostrar en el blog primero los eventos mas actuales (insertados los ultimos en la hoja de calculo
-				val = worksheet.cell(num_fils-i+1, j).value
-				matriz[i-1].append(val)
-				j = j + 1
-			i = i + 1
-			j = 1
 		
-		# Ahora devolvemos la matriz al html, donde con js la cogeremos y la iremos formateando para mostrar los eventos en el blog
-		template_values = {'matriz': matriz, 'num_fils': num_fils, 'num_cols': num_cols}
-		template = JINJA_ENVIRONMENT.get_template('templates/MAIN_PAGE_HTML_BOOT.html')
-		self.response.write(template.render(template_values))
+	# Ahora devolvemos la matriz al html, donde con js la cogeremos y la iremos formateando para mostrar los eventos en el blog
+	template_values = {'matriz': matriz, 'num_fils': num_fils, 'num_cols': num_cols}
+	template = JINJA_ENVIRONMENT.get_template('templates/MAIN_PAGE_HTML_BOOT.html')
+	self.response.write(template.render(template_values))
 
 #Esta clase se encarga de gestionar los datos introducidos en el formulario de registro de nuevos eventos (introduce en calendar y en hoja de calculo)
 class Guestbook(webapp2.RequestHandler):
@@ -148,9 +148,9 @@ class Formulario(webapp2.RequestHandler):
 # Devuelve el html que contiene la hoja de calculo
 class Hoja(webapp2.RequestHandler):
     def get(self):
-		template_values = {}
-		template = JINJA_ENVIRONMENT.get_template('templates/hoja_calculo.html')
-		self.response.write(template.render(template_values))
+	template_values = {}
+	template = JINJA_ENVIRONMENT.get_template('templates/hoja_calculo.html')
+	self.response.write(template.render(template_values))
 
 #Devuelve un certificado personalizado para el ponente del evento que se esta creando
 class Certificado(webapp2.RequestHandler):
