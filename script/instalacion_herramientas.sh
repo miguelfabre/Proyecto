@@ -9,7 +9,7 @@ apt-get install python -y
 apt-get install python3-setuptools -y
 easy_install3 pip
 apt-get install python-dev build-essential -y
-easy_install3 Paste 
+easy_install3 WebOb 
 easy_install3 Paste
 easy_install3 webapp2
 # Instalamos wget para poder descargar archivos

@@ -23,9 +23,9 @@ execute "install python3-setuptools" do
   command "sudo chroot /home/jaulas/saucy32/ apt-get install python3-setuptools -y"
 end
 
-execute "easy_install3 pip" do
-	command "easy_install3 pip"
-end
+#execute "easy_install3 pip" do
+#	command "easy_install3 pip"
+#end
 
 execute "install python-dev build-essential" do
   command "sudo chroot /home/jaulas/saucy32/ apt-get install python-dev build-essential -y"
@@ -48,11 +48,6 @@ end
 #Instalamos wget para poder descargar archivos
 execute "install wget" do
   command "sudo chroot /home/jaulas/saucy32/ apt-get install wget -y"
-end
-
-#Instalamos curl para posteriormente poder realizar los test de pruebas
-execute "install curl" do
-  command "sudo chroot /home/jaulas/saucy32/ apt-get install curl -y"
 end
 
 #Descargamos el sdk de Google App Engine
@@ -88,9 +83,9 @@ end
 
 #Ejecutamos el .py de nuestra app
 
-#execute "execute app"
-#	command "sudo chroot /home/jaulas/saucy32/ python google_appengine/dev_appserver.py --host=0.0.0.0 pruebadriveiv/"
-#end
+execute "execute app"
+	command "sudo chroot /home/jaulas/saucy32/ python google_appengine/dev_appserver.py --host=0.0.0.0 pruebadriveiv/ --skip_sdk_update_check"
+end
 
 
 
