@@ -1,48 +1,65 @@
 # -*- coding: utf-8 -*-
-#Importación de bibliotecas
 import cgi
 import webapp2
 import time
-
+import httplib2
+import jinja2
+import os
+import urllib
 import gdata.spreadsheet.service
+import gspread
+import json 
+from pprint import pprint 
 from google.appengine.api import users
+from apiclient.discovery import build
+from oauth2client.client import OAuth2WebServerFlow
+from oauth2client.file import Storage
+from oauth2client.tools import run
+from google.appengine.api import memcache
+from oauth2client.appengine import AppAssertionCredentials
+from oauth2client.appengine import OAuth2Decorator
 
-#Conexión para crear/modificar la hoja de cálculo en drive
+from google.appengine.api import urlfetch
+urlfetch.set_default_fetch_deadline(45)
+
 email = 'proyectoivosl@gmail.com'
 password = 'pakhires'
 spreadsheet_key = '1R3zLvtKxllRM71PdCDQu9XhNYo7xmf0On49WreyLi24' # key param
 worksheet_id = 'od6' # default
 
-#Formulario HTML
+decorator = OAuth2Decorator(
+  client_id='97297373612-mvc0t7e42nblkricfi4sn6tfcqqptjo2.apps.googleusercontent.com',
+  client_secret='qbtiG-fyhN9iTucuu8OBdC98',
+  scope='https://www.googleapis.com/auth/calendar')
 
-MAIN_PAGE_HTML = """\
-<html>
-  <body>
-    <form action="/sign" method="post">
-	<h3>Nombre del evento</h3>
-      <div><textarea name="nombre" rows="3" cols="60"></textarea></div>
-	<h3>Descripcion del evento</h3>
-      <div><textarea name="descripcion" rows="3" cols="60"></textarea></div>
-      <div><input type="submit" value="Enviar datos"></div>
-    </form>
-  </body>
-</html>
-"""
+service = build('calendar', 'v3', developerKey='AIzaSyDwEDO-Qa3ep2l6kP2e_r6ivjKF28D6LXk')
 
-#URL de la hoja de cálculo
-URL_SPREADSHEET_HTML = """\
-<html>
-  <body>
-    <a href="https://docs.google.com/spreadsheets/d/1R3zLvtKxllRM71PdCDQu9XhNYo7xmf0On49WreyLi24/edit#gid=0">Enlace a la hoja de calculo de Google Drive</a>
-    </form>
-  </body>
-</html>
-"""
-
-#Manejador del formulario
+#Blog de la aplicacion donde se visualizan los eventos registrados
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        self.response.write(MAIN_PAGE_HTML)
+		gc = gspread.login(email, password)
+		sht1 = gc.open_by_key(spreadsheet_key)
+		worksheet = sht1.get_worksheet(0)
+		matriz = []
+		num_cols = worksheet.col_count
+		num_fils = worksheet.row_count
+		#Metemos un bucle que recorra toda la hoja y vamos almacenando los datos en una matriz (array de array)
+		i = 1
+		j = 1
+		while i < num_fils:
+			matriz.append([])
+			while j <= num_cols:
+		#Recorremos el documento de forma inversa para mostrar en el blog primero los eventos mas actuales (insertados los ultimos en la hoja de calculo
+				val = worksheet.cell(num_fils-i+1, j).value
+				matriz[i-1].append(val)
+				j = j + 1
+			i = i + 1
+			j = 1
+		
+		# Ahora devolvemos la matriz al html, donde con js la cogeremos y la iremos formateando para mostrar los eventos en el blog
+		template_values = {'matriz': matriz, 'num_fils': num_fils, 'num_cols': num_cols}
+		template = JINJA_ENVIRONMENT.get_template('templates/MAIN_PAGE_HTML_BOOT.html')
+		self.response.write(template.render(template_values))
 
 #Manejador que lee los datos del formulario y realiza la inserción
 class Guestbook(webapp2.RequestHandler):
@@ -93,13 +110,26 @@ class Test(webapp2.RequestHandler):
 		
 		return valor
 
-#Manejador de enlaces
+# Devuelve el html que contiene la hoja de calculo
+class Hoja(webapp2.RequestHandler):
+    def get(self):
+		template_values = {}
+		template = JINJA_ENVIRONMENT.get_template('templates/hoja_calculo.html')
+		self.response.write(template.render(template_values))
+
+#Manejo de las URLs
 application = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/sign', Guestbook),
-    ('/test', Test)
+    ('/test', Test),
+	('/hoja', Hoja),
+	(decorator.callback_path, decorator.callback_handler())
 ], debug=True)
 
+JINJA_ENVIRONMENT = jinja2.Environment(
+	loader = jinja2.FileSystemLoader(os.path.dirname(__file__)),
+	extensions = ['jinja2.ext.autoescape'],
+	autoescape = True)
 
 # ---------------------------------------------
 
