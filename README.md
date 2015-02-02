@@ -1,5 +1,7 @@
 # SaraosOSL: Gestión de eventos de la OSL
 
+IMPORTANTE: En este proyecto se encuentra única y exclusivamente el código realizado por los miembros de éste. Con el fin de no dificultar la corrección del código, se ha evitado introducir código ajeno (bibliotecas de google,css-bootstrap...). Los fuentes del proyecto junto con todas sus dependencias se encuentra [aquí](https://github.com/miguelfabre/pruebadriveiv). Éste código será el empleado en el despliegue de la app.
+
 ## Introducción
 
 [Descripción inicial](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/descripcion_inicial.md)
