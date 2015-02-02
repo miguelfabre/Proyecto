@@ -14,9 +14,13 @@ IMPORTANTE: En este proyecto se encuentra única y exclusivamente el código rea
 
 [Tu primera aplicación con Google App Engine](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/primera_app_gap.md)
 
-##Despliege de la aplicación y ejecución de test (Ubuntu)
+##Provisionamiento y despliegue de la aplicación con scripts (Ubuntu)
 
-[2 pasos para desplegar y probar SaraosOSL](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/despliegue_script_2_pasos.md)
+[2 pasos para aprovisionar y desplegar y probar SaraosOSL con scripts](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/despliegue_script_2_pasos.md)
+
+##Provisionamiento y despliegue de la aplicación con Chef (Ubuntu)
+
+[Aprovisionamiento y despliegue de la aplicación usando Chef](https://github.com/miguelfabre/Proyecto/blob/master/documentacion/despliegue_chef_saraos.md)
 
 ##Entorno de pruebas
 
